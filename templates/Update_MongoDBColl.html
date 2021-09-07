@@ -1,0 +1,25 @@
+
+
+
+{% block head %}
+
+<title>DB Connection</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Data Entry - MongoDB Collection</h1>
+
+    <div class="form">
+        <form action="http://127.0.0.1:5000/createCol" method="POST"">
+            <label for="collName">Data entry for <b> Salary </b> Collection</label>
+            <input type="submit">
+            <input type="hidden" id="conType" name="conType" value={{dbConType}} maxlength="30" size="30">
+        <br>
+            <textarea name="colData">Enter data in name:value pair...</textarea>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

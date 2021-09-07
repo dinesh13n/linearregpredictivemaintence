@@ -1,0 +1,11 @@
+{	"ReadFileName": "ai4i2020.csv",
+	"TrainModelPath": "Training//Model//",
+	"DataDir": "DataSource//Data",
+	"TargetCol": "Air temperature [K]",
+	"ModelVer" : "0.1",
+	"exeType" : "Training",
+	"hyperparam" : "False",
+	"classifier" : "ElasticNet",
+	"IndependentCol": ["Process temperature [K]","Rotational speed [rpm]","Torque [Nm]","Tool wear [min]","Machine failure","TWF","HDF","PWF","OSF","RNF"],
+	"removecolumn": ["UDI","Product ID","Type"]
+}

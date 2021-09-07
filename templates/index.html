@@ -1,0 +1,42 @@
+
+
+
+{% block head %}
+
+<title>Supervised Model</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Regression Model</h1>
+
+    <div class="form">
+        <form action="https://linearregpredictivemaintence.herokuapp.com/TestingModel" method="POST" enctype=multipart/form-data>
+            <label for="classifier">Choose a Regression Model</label>
+
+            <select id="classifier" name="classifier">
+                <option value="LinearRegression">Linear</option>
+                <option value="Ridge">Ridge</option>
+                <option value="Lasso">Lasso</option>
+                <option value="ElasticNet">ElasticNet</option>
+            </select>
+            <button type="submit" formaction="https://linearregpredictivemaintence.herokuapp.com/TestingModel">Submit</button>   <a href="{{ url_for('static', filename='css/AI4I_2020_Predictive-Maintenance-Dataset.html') }}"><b><i>Pandas Profiling</i></b></a>
+            <br>
+            <br>
+            <br>
+            <label>Process temperature [K] : </label><input type="number" value="0" name="Process_temperature" id="Process_temperature" pattern="[0-9]+"><BR>
+            <label>Rotational speed [rpm] : </label><input type="number" value="0" name="Rotational_speed" id="Rotational_speed" pattern="[0-9]+"><BR>
+            <label>Torque [Nm] : </label><input type="number" name="Torque" value="0" id="Torque" pattern="[0-9]+"><BR>
+            <label>Tool wear [min] : </label><input type="number" name="Tool_wear" value="0" id="Tool_wear" pattern="[0-9]+"><BR>
+            <label>Machine failure : </label><input type="number" name="Machine_failure" value="0" id="Machine_failure" pattern="[0-9]+"><BR>
+            <label>TWF : </label><input type="number" name="TWF" id="TWF" value="0" pattern="[0-9]+"><BR>
+            <label>HDF : </label><input type="number" name="HDF" id="HDF" value="0" pattern="[0-9]+"><BR>
+            <label>PWF : </label><input type="number" name="PWF" id="PWF" value="0" pattern="[0-9]+"><BR>
+            <label>OSF : </label><input type="number" name="OSF" id="OSF" value="0" pattern="[0-9]+"><BR>
+            <label>RNF : </label><input type="number" name="RNF" id="RNF" value="0" pattern="[0-9]+"><BR><BR><BR>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

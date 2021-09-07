@@ -1,0 +1,43 @@
+
+
+
+{% block head %}
+
+<title>DB Connection</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">MongoDB Salary Collection Data</h1>
+
+    <div class="form">
+        <form action="http://127.0.0.1:5000/" method="POST"">
+        <br>
+            <textarea name="colData" rows="20" cols="150" >{{ColDoc}}</textarea>
+        <br>
+        <button type="submit">Back to Home</button>
+        <td><a href="{{ url_for('download', filename='SalaryDoc.csv') }}">Download Document</a></td>
+        </form>
+
+    </div>
+</div>
+<div class="Update">
+    <h1 style="text-align: center">Update Document</h1>
+
+    <div class="form">
+        <form action="http://127.0.0.1:5000/updateCol" method="POST"">
+        <br>
+        <label for="updCond">Input Condition</label>
+        <textarea name="updInpCond" rows="3" cols="100">Please input condition in {"abc":cdf} format....</textarea>
+        <br>
+        <label for="updCond">Input Update Field Value</label>
+        <textarea name="updFldVal" rows="3" cols="100">Please input field and value to update in {"abc":cdf} format....</textarea>
+        <br>
+        <input type="hidden" id="conType" name="conType" value={{dbConType}} maxlength="30" size="30">
+        <input type="submit" value="Update">
+        </form>
+
+    </div>
+</div>
+{% endblock %}

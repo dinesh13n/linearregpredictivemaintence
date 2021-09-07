@@ -1,0 +1,782 @@
+2021-09-03 15:07:02,274 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 15:07:02,274 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 15:07:02,275 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'Ridge', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 15:07:02,275 : INFO : sLogger : main : <module> - (27) : classifier : Ridge
+2021-09-03 15:07:02,279 : INFO : sLogger : main : <module> - (35) : TrainModelPath : Training//Model//
+2021-09-03 15:07:02,279 : INFO : sLogger : main : <module> - (38) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 15:07:02,279 : INFO : sLogger : main : <module> - (40) : TargetCol : Air temperature [K]
+2021-09-03 15:07:02,279 : INFO : sLogger : main : <module> - (43) : ModelVer : 0.1
+2021-09-03 15:07:02,279 : INFO : sLogger : main : <module> - (46) : DataDir : DataSource//Data
+2021-09-03 15:07:02,280 : INFO : sLogger : main : <module> - (48) : FileName : ai4i2020.csv
+2021-09-03 15:07:02,283 : INFO : sLogger : main : <module> - (57) : hyperparam : False
+2021-09-03 15:07:02,284 : INFO : sLogger : main : <module> - (60) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 15:07:02,286 : INFO : sLogger : main : Load_Data - (66) : Load the data from file - ai4i2020.csv 
+2021-09-03 15:07:02,286 : INFO : sLogger : LoadFromFile : ReadCSVData - (27) : File path to read file : DataSource//Data\ai4i2020.csv
+2021-09-03 15:07:02,318 : INFO : sLogger : main : Load_Data - (71) : Shape of the data is : (10000, 14)
+2021-09-03 15:07:02,318 : INFO : sLogger : main : GeneratePrifileReport - (78) : Initiate to generate the pandas profile report...
+2021-09-03 15:07:02,318 : INFO : sLogger : main : GeneratePrifileReport - (82) : Pandas profile AI4I_2020_Predictive-Maintenance-Dataset.html generated successfully : {}
+2021-09-03 15:07:02,318 : INFO : sLogger : main : PreprocessData - (92) : Initiate to preprocess the data :
+2021-09-03 15:07:02,319 : INFO : sLogger : preprocess : dropcolumn - (16) : Initiate to drop ['UDI', 'Product ID', 'Type'] column from the dataset
+2021-09-03 15:07:02,322 : INFO : sLogger : preprocess : dropcolumn - (18) : Successfully drop the ['UDI', 'Product ID', 'Type'] column from the dataset
+2021-09-03 15:07:02,325 : INFO : sLogger : TrainModel : TrainTestSplit - (27) : Train test split is in progress....
+2021-09-03 15:07:02,332 : INFO : sLogger : TrainModel : TrainTestSplit - (31) : Train test split is completed....
+2021-09-03 15:07:02,347 : INFO : sLogger : TrainModel : TrainSupervisedModel - (161) : Initiate to train Ridge Model
+2021-09-03 15:07:02,390 : INFO : sLogger : TrainModel : TrainSupervisedModel - (176) : Ridge model training completed successfully
+2021-09-03 15:07:02,390 : INFO : sLogger : main : TrainingModel - (114) : Initiate to dump the Training Ridge model
+2021-09-03 15:07:02,391 : INFO : sLogger : TrainModel : DumpModel - (113) : Initiate to dump the trained model
+2021-09-03 15:07:02,392 : INFO : sLogger : TrainModel : DumpModel - (124) : save the model to the disc with filename - Ridge-without-hyper-v-0.1.sav
+2021-09-03 15:07:02,396 : INFO : sLogger : TrainModel : DumpModel - (126) : Training model - Ridge-without-hyper-v-0.1.sav created successfully :
+2021-09-03 15:07:02,408 : INFO : sLogger : main : TrainingModel - (120) : Model score without hyperparameter tuning for Ridge model.. : 0.7831328503833676
+2021-09-03 15:07:37,939 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 15:07:37,940 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 15:07:37,941 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'Lasso', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 15:07:37,941 : INFO : sLogger : main : <module> - (27) : classifier : Lasso
+2021-09-03 15:07:37,947 : INFO : sLogger : main : <module> - (35) : TrainModelPath : Training//Model//
+2021-09-03 15:07:37,948 : INFO : sLogger : main : <module> - (38) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 15:07:37,948 : INFO : sLogger : main : <module> - (40) : TargetCol : Air temperature [K]
+2021-09-03 15:07:37,948 : INFO : sLogger : main : <module> - (43) : ModelVer : 0.1
+2021-09-03 15:07:37,949 : INFO : sLogger : main : <module> - (46) : DataDir : DataSource//Data
+2021-09-03 15:07:37,949 : INFO : sLogger : main : <module> - (48) : FileName : ai4i2020.csv
+2021-09-03 15:07:37,954 : INFO : sLogger : main : <module> - (57) : hyperparam : False
+2021-09-03 15:07:37,954 : INFO : sLogger : main : <module> - (60) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 15:07:37,961 : INFO : sLogger : main : Load_Data - (66) : Load the data from file - ai4i2020.csv 
+2021-09-03 15:07:37,962 : INFO : sLogger : LoadFromFile : ReadCSVData - (27) : File path to read file : DataSource//Data\ai4i2020.csv
+2021-09-03 15:07:38,019 : INFO : sLogger : main : Load_Data - (71) : Shape of the data is : (10000, 14)
+2021-09-03 15:07:38,020 : INFO : sLogger : main : GeneratePrifileReport - (78) : Initiate to generate the pandas profile report...
+2021-09-03 15:07:38,020 : INFO : sLogger : main : GeneratePrifileReport - (82) : Pandas profile AI4I_2020_Predictive-Maintenance-Dataset.html generated successfully : {}
+2021-09-03 15:07:38,020 : INFO : sLogger : main : PreprocessData - (92) : Initiate to preprocess the data :
+2021-09-03 15:07:38,020 : INFO : sLogger : preprocess : dropcolumn - (16) : Initiate to drop ['UDI', 'Product ID', 'Type'] column from the dataset
+2021-09-03 15:07:38,024 : INFO : sLogger : preprocess : dropcolumn - (18) : Successfully drop the ['UDI', 'Product ID', 'Type'] column from the dataset
+2021-09-03 15:07:38,027 : INFO : sLogger : TrainModel : TrainTestSplit - (27) : Train test split is in progress....
+2021-09-03 15:07:38,032 : INFO : sLogger : TrainModel : TrainTestSplit - (31) : Train test split is completed....
+2021-09-03 15:07:38,052 : INFO : sLogger : TrainModel : TrainSupervisedModel - (161) : Initiate to train Lasso Model
+2021-09-03 15:07:38,086 : INFO : sLogger : TrainModel : TrainSupervisedModel - (176) : Lasso model training completed successfully
+2021-09-03 15:07:38,087 : INFO : sLogger : main : TrainingModel - (114) : Initiate to dump the Training Lasso model
+2021-09-03 15:07:38,087 : INFO : sLogger : TrainModel : DumpModel - (113) : Initiate to dump the trained model
+2021-09-03 15:07:38,089 : INFO : sLogger : TrainModel : DumpModel - (124) : save the model to the disc with filename - Lasso-without-hyper-v-0.1.sav
+2021-09-03 15:07:38,093 : INFO : sLogger : TrainModel : DumpModel - (126) : Training model - Lasso-without-hyper-v-0.1.sav created successfully :
+2021-09-03 15:07:38,109 : INFO : sLogger : main : TrainingModel - (120) : Model score without hyperparameter tuning for Lasso model.. : 0.5226924143076115
+2021-09-03 15:08:28,249 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 15:08:28,249 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 15:08:28,251 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 15:08:28,251 : INFO : sLogger : main : <module> - (27) : classifier : ElasticNet
+2021-09-03 15:08:28,256 : INFO : sLogger : main : <module> - (35) : TrainModelPath : Training//Model//
+2021-09-03 15:08:28,257 : INFO : sLogger : main : <module> - (38) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 15:08:28,257 : INFO : sLogger : main : <module> - (40) : TargetCol : Air temperature [K]
+2021-09-03 15:08:28,257 : INFO : sLogger : main : <module> - (43) : ModelVer : 0.1
+2021-09-03 15:08:28,257 : INFO : sLogger : main : <module> - (46) : DataDir : DataSource//Data
+2021-09-03 15:08:28,258 : INFO : sLogger : main : <module> - (48) : FileName : ai4i2020.csv
+2021-09-03 15:08:28,260 : INFO : sLogger : main : <module> - (57) : hyperparam : False
+2021-09-03 15:08:28,260 : INFO : sLogger : main : <module> - (60) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 15:08:28,264 : INFO : sLogger : main : Load_Data - (66) : Load the data from file - ai4i2020.csv 
+2021-09-03 15:08:28,264 : INFO : sLogger : LoadFromFile : ReadCSVData - (27) : File path to read file : DataSource//Data\ai4i2020.csv
+2021-09-03 15:08:28,299 : INFO : sLogger : main : Load_Data - (71) : Shape of the data is : (10000, 14)
+2021-09-03 15:08:28,300 : INFO : sLogger : main : GeneratePrifileReport - (78) : Initiate to generate the pandas profile report...
+2021-09-03 15:08:28,300 : INFO : sLogger : main : GeneratePrifileReport - (82) : Pandas profile AI4I_2020_Predictive-Maintenance-Dataset.html generated successfully : {}
+2021-09-03 15:08:28,300 : INFO : sLogger : main : PreprocessData - (92) : Initiate to preprocess the data :
+2021-09-03 15:08:28,300 : INFO : sLogger : preprocess : dropcolumn - (16) : Initiate to drop ['UDI', 'Product ID', 'Type'] column from the dataset
+2021-09-03 15:08:28,302 : INFO : sLogger : preprocess : dropcolumn - (18) : Successfully drop the ['UDI', 'Product ID', 'Type'] column from the dataset
+2021-09-03 15:08:28,304 : INFO : sLogger : TrainModel : TrainTestSplit - (27) : Train test split is in progress....
+2021-09-03 15:08:28,307 : INFO : sLogger : TrainModel : TrainTestSplit - (31) : Train test split is completed....
+2021-09-03 15:08:28,315 : INFO : sLogger : TrainModel : TrainSupervisedModel - (161) : Initiate to train ElasticNet Model
+2021-09-03 15:08:28,331 : INFO : sLogger : TrainModel : TrainSupervisedModel - (176) : ElasticNet model training completed successfully
+2021-09-03 15:08:28,331 : INFO : sLogger : main : TrainingModel - (114) : Initiate to dump the Training ElasticNet model
+2021-09-03 15:08:28,331 : INFO : sLogger : TrainModel : DumpModel - (113) : Initiate to dump the trained model
+2021-09-03 15:08:28,333 : INFO : sLogger : TrainModel : DumpModel - (124) : save the model to the disc with filename - ElasticNet-without-hyper-v-0.1.sav
+2021-09-03 15:08:28,334 : INFO : sLogger : TrainModel : DumpModel - (126) : Training model - ElasticNet-without-hyper-v-0.1.sav created successfully :
+2021-09-03 15:08:28,347 : INFO : sLogger : main : TrainingModel - (120) : Model score without hyperparameter tuning for ElasticNet model.. : 0.5642536293285767
+2021-09-03 20:37:33,640 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:37:33,640 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:37:33,650 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:37:33,650 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:37:33,654 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:37:33,654 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:37:33,655 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:37:33,655 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:37:33,655 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:37:33,655 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:37:33,658 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:37:33,658 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:37:39,610 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:37:39,610 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:37:39,610 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:37:39,610 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:37:39,613 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:37:39,613 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:37:39,614 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:37:39,614 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:37:39,614 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:37:39,614 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:37:39,616 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:37:39,616 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:38:19,945 : CRITICAL : sLogger : preprocess : stdscalling - (33) : Exception occoured, while scalling the dataframe dataset : could not convert string to float: '10,2,15,1,45,2,1,0,1,0'
+2021-09-03 20:38:19,945 : CRITICAL : sLogger : main : TestingModel - (154) : Exception occured, while getting model result :local variable 'scaled' referenced before assignment
+2021-09-03 20:41:53,638 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:41:53,638 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:41:53,647 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:41:53,647 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:41:53,651 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:41:53,651 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:41:53,651 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:41:53,651 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:41:53,651 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:41:53,651 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:41:53,654 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:41:53,655 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:42:06,548 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:42:06,548 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:42:06,549 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:42:06,549 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:42:06,552 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:42:06,552 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:42:06,552 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:42:06,552 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:42:06,552 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:42:06,552 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:42:06,554 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:42:06,555 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:42:33,755 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:42:33,755 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:42:33,756 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:42:33,757 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:42:33,763 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:42:33,764 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:42:33,765 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:42:33,765 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:42:33,767 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:42:33,768 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:42:33,777 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:42:33,777 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:42:43,895 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:42:43,895 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:42:43,895 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:42:43,896 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:42:43,899 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:42:43,900 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:42:43,900 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:42:43,900 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:42:43,900 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:42:43,900 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:42:43,904 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:42:43,904 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:44:27,387 : CRITICAL : sLogger : main : TestingModel - (160) : Exception occured, while getting model result :unsupported operand type(s) for +: 'int' and 'str'
+2021-09-03 20:47:20,270 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:47:20,270 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:47:20,271 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:47:20,272 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:47:20,276 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:47:20,277 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:47:20,277 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:47:20,277 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:47:20,277 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:47:20,277 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:47:20,280 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:47:20,281 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:47:26,930 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:47:26,931 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:47:26,932 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:47:26,932 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:47:26,937 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:47:26,938 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:47:26,938 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:47:26,938 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:47:26,939 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:47:26,939 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:47:26,943 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:47:26,943 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:48:17,391 : CRITICAL : sLogger : main : TestingModel - (161) : Exception occured, while getting model result :unsupported operand type(s) for +: 'int' and 'str'
+2021-09-03 20:50:41,597 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:50:41,598 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:50:41,599 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:50:41,599 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:50:41,603 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:50:41,604 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:50:41,604 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:50:41,604 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:50:41,604 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:50:41,604 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:50:41,607 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:50:41,608 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:50:48,208 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:50:48,208 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:50:48,209 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:50:48,209 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:50:48,214 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:50:48,214 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:50:48,214 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:50:48,215 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:50:48,215 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:50:48,215 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:50:48,219 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:50:48,219 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:51:12,792 : CRITICAL : sLogger : preprocess : stdscalling - (33) : Exception occoured, while scalling the dataframe dataset : could not convert string to float: '306,1275,36,3,0,0,0,0,0,0'
+2021-09-03 20:51:12,792 : CRITICAL : sLogger : main : TestingModel - (161) : Exception occured, while getting model result :local variable 'scaled' referenced before assignment
+2021-09-03 20:55:53,462 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:55:53,463 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:55:53,485 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:55:53,486 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:55:53,493 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:55:53,493 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:55:53,494 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:55:53,494 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:55:53,494 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:55:53,494 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:55:53,499 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:55:53,499 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:56:22,470 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:56:22,471 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:56:22,471 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:56:22,471 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:56:22,475 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:56:22,475 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:56:22,475 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:56:22,475 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:56:22,475 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:56:22,475 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:56:22,478 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:56:22,478 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:56:28,749 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 20:56:28,749 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 20:56:28,750 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 20:56:28,750 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 20:56:28,753 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 20:56:28,753 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 20:56:28,753 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 20:56:28,754 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 20:56:28,754 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 20:56:28,754 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 20:56:28,757 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 20:56:28,758 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 20:56:58,293 : CRITICAL : sLogger : preprocess : stdscalling - (33) : Exception occoured, while scalling the dataframe dataset : Expected 2D array, got 1D array instead:
+array=[ 306. 1275.   36.    3.    0.    0.    0.    0.    0.    0.].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2021-09-03 20:56:58,293 : CRITICAL : sLogger : main : TestingModel - (162) : Exception occured, while getting model result :local variable 'scaled' referenced before assignment
+2021-09-03 21:07:53,838 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:07:53,838 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:07:53,839 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:07:53,839 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:07:53,842 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:07:53,843 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:07:53,843 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:07:53,843 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:07:53,843 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:07:53,843 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:07:53,846 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:07:53,847 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:08:00,555 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:08:00,555 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:08:00,556 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:08:00,556 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:08:00,559 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:08:00,560 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:08:00,560 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:08:00,560 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:08:00,560 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:08:00,560 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:08:00,562 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:08:00,563 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:08:50,797 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:08:50,797 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:08:50,798 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:08:50,799 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:08:50,805 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:08:50,805 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:08:50,806 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:08:50,806 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:08:50,806 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:08:50,806 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:08:50,811 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:08:50,811 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:08:56,670 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:08:56,670 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:08:56,671 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:08:56,671 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:08:56,676 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:08:56,676 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:08:56,677 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:08:56,677 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:08:56,677 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:08:56,677 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:08:56,682 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:08:56,682 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:09:23,735 : CRITICAL : sLogger : main : TestingModel - (162) : Exception occured, while getting model result :'list' object has no attribute 'reshape'
+2021-09-03 21:13:14,512 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:13:14,513 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:13:14,564 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:13:14,564 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:13:14,604 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:13:14,604 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:13:14,605 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:13:14,605 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:13:14,605 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:13:14,606 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:13:14,629 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:13:14,630 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:13:33,443 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:13:33,443 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:13:33,445 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:13:33,445 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:13:33,449 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:13:33,449 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:13:33,449 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:13:33,449 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:13:33,450 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:13:33,450 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:13:33,453 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:13:33,453 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:13:41,983 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:13:41,983 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:13:41,984 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:13:41,985 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:13:41,990 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:13:41,991 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:13:41,991 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:13:41,991 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:13:41,991 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:13:41,991 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:13:41,995 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:13:41,996 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:19:10,667 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:19:10,667 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:19:10,668 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:19:10,668 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:19:10,672 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:19:10,672 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:19:10,673 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:19:10,673 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:19:10,673 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:19:10,673 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:19:10,676 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:19:10,676 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:19:16,514 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:19:16,514 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:19:16,515 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:19:16,515 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:19:16,518 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:19:16,518 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:19:16,518 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:19:16,519 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:19:16,519 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:19:16,519 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:19:16,521 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:19:16,522 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:22:35,734 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:22:35,734 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:22:35,735 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:22:35,735 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:22:35,739 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:22:35,739 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:22:35,739 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:22:35,739 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:22:35,740 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:22:35,740 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:22:35,743 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:22:35,743 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:22:41,282 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:22:41,283 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:22:41,283 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:22:41,283 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:22:41,286 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:22:41,287 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:22:41,287 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:22:41,287 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:22:41,287 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:22:41,287 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:22:41,290 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:22:41,290 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:28:28,360 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:28:28,360 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:28:28,367 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:28:28,367 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:28:28,370 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:28:28,371 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:28:28,371 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:28:28,371 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:28:28,371 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:28:28,371 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:28:28,373 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:28:28,374 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:28:34,081 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:28:34,081 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:28:34,082 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:28:34,082 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:28:34,085 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:28:34,085 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:28:34,086 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:28:34,086 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:28:34,086 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:28:34,086 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:28:34,089 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:28:34,089 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:32:30,200 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:32:30,201 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:32:30,201 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:32:30,201 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:32:30,204 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:32:30,205 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:32:30,205 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:32:30,205 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:32:30,205 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:32:30,205 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:32:30,207 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:32:30,208 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:32:36,180 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:32:36,181 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:32:36,181 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:32:36,181 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:32:36,184 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:32:36,185 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:32:36,185 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:32:36,185 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:32:36,185 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:32:36,185 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:32:36,188 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:32:36,188 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:37:36,171 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:37:36,171 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:37:36,171 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:37:36,172 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:37:36,175 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:37:36,176 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:37:36,176 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:37:36,176 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:37:36,176 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:37:36,176 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:37:36,179 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:37:36,179 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:37:41,779 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:37:41,780 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:37:41,780 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:37:41,780 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:37:41,784 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:37:41,784 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:37:41,785 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:37:41,785 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:37:41,785 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:37:41,785 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:37:41,787 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:37:41,788 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:39:05,192 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:39:05,193 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:39:05,193 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:39:05,194 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:39:05,201 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:39:05,201 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:39:05,201 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:39:05,202 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:39:05,203 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:39:05,203 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:39:05,207 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:39:05,207 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:39:26,091 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:39:26,092 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:39:26,093 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:39:26,093 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:39:26,101 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:39:26,101 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:39:26,102 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:39:26,102 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:39:26,102 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:39:26,102 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:39:26,108 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:39:26,108 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:53:36,992 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:53:36,993 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:53:37,003 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:53:37,003 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:53:37,008 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:53:37,008 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:53:37,008 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:53:37,009 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:53:37,009 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:53:37,009 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:53:37,013 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:53:37,014 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:53:44,981 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:53:44,982 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:53:44,982 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:53:44,983 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:53:44,988 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:53:44,988 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:53:44,989 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:53:44,989 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:53:44,989 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:53:44,989 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:53:44,993 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:53:44,994 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:54:51,266 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:54:51,266 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:54:51,267 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:54:51,267 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:54:51,271 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:54:51,271 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:54:51,271 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:54:51,271 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:54:51,272 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:54:51,272 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:54:51,275 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:54:51,276 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:54:57,517 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:54:57,517 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:54:57,518 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:54:57,519 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:54:57,523 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:54:57,523 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:54:57,524 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:54:57,524 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:54:57,524 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:54:57,524 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:54:57,527 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:54:57,528 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:57:52,392 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:57:52,392 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:57:52,401 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:57:52,401 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:57:52,405 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:57:52,405 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:57:52,406 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:57:52,406 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:57:52,406 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:57:52,406 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:57:52,408 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:57:52,408 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:57:58,111 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:57:58,111 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:57:58,112 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:57:58,112 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:57:58,115 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:57:58,115 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:57:58,115 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:57:58,116 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:57:58,116 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:57:58,116 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:57:58,119 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:57:58,119 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 21:59:45,272 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 21:59:45,273 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 21:59:45,273 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 21:59:45,273 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 21:59:45,280 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 21:59:45,280 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 21:59:45,280 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 21:59:45,280 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 21:59:45,281 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 21:59:45,281 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 21:59:45,284 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 21:59:45,285 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:05:25,636 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:05:25,636 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:05:25,637 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:05:25,637 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:05:25,639 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:05:25,640 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:05:25,640 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:05:25,640 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:05:25,640 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:05:25,640 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:05:25,643 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:05:25,643 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:05:33,557 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:05:33,558 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:05:33,559 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:05:33,559 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:05:33,595 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:05:33,596 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:05:33,596 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:05:33,596 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:05:33,596 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:05:33,597 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:05:33,602 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:05:33,602 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:06:28,881 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:06:28,881 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:06:28,882 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:06:28,882 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:06:28,885 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:06:28,886 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:06:28,886 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:06:28,886 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:06:28,886 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:06:28,886 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:06:28,889 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:06:28,889 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:06:36,203 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:06:36,203 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:06:36,204 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:06:36,204 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:06:36,207 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:06:36,208 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:06:36,208 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:06:36,208 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:06:36,208 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:06:36,208 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:06:36,211 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:06:36,211 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:08:13,654 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:08:13,654 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:08:13,655 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:08:13,655 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:08:13,664 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:08:13,664 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:08:13,665 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:08:13,665 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:08:13,665 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:08:13,665 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:08:13,673 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:08:13,673 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:08:19,542 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:08:19,542 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:08:19,542 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:08:19,542 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:08:19,545 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:08:19,545 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:08:19,546 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:08:19,546 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:08:19,546 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:08:19,546 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:08:19,548 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:08:19,548 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:14:38,900 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:14:38,900 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:14:38,907 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:14:38,907 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:14:38,910 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:14:38,911 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:14:38,911 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:14:38,911 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:14:38,911 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:14:38,911 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:14:38,914 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:14:38,914 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:14:45,728 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:14:45,728 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:14:45,729 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:14:45,729 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:14:45,732 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:14:45,732 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:14:45,733 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:14:45,733 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:14:45,733 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:14:45,733 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:14:45,736 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:14:45,736 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:16:14,739 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:16:14,739 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:16:14,740 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:16:14,740 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:16:14,744 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:16:14,744 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:16:14,744 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:16:14,745 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:16:14,745 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:16:14,745 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:16:14,747 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:16:14,748 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:16:20,845 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:16:20,845 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:16:20,845 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:16:20,846 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:16:20,848 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:16:20,849 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:16:20,849 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:16:20,849 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:16:20,849 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:16:20,849 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:16:20,852 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:16:20,853 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:18:16,166 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:18:16,166 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:18:16,167 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:18:16,167 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:18:16,170 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:18:16,170 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:18:16,171 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:18:16,171 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:18:16,171 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:18:16,171 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:18:16,174 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:18:16,174 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:18:23,071 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:18:23,071 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:18:23,072 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:18:23,072 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:18:23,075 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:18:23,075 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:18:23,075 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:18:23,075 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:18:23,075 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:18:23,076 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:18:23,078 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:18:23,079 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:21:51,471 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:21:51,471 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:21:51,472 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:21:51,472 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:21:51,476 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:21:51,476 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:21:51,476 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:21:51,476 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:21:51,476 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:21:51,477 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:21:51,479 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:21:51,479 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:21:58,267 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:21:58,267 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:21:58,267 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:21:58,268 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:21:58,271 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:21:58,271 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:21:58,271 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:21:58,271 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:21:58,272 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:21:58,272 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:21:58,276 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:21:58,276 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:24:02,737 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:24:02,737 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:24:02,738 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:24:02,738 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:24:02,741 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:24:02,742 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:24:02,742 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:24:02,742 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:24:02,742 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:24:02,742 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:24:02,746 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:24:02,746 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:24:11,665 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:24:11,665 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:24:11,666 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:24:11,666 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:24:11,670 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:24:11,670 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:24:11,670 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:24:11,671 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:24:11,671 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:24:11,671 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:24:11,674 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:24:11,674 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:40:15,852 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:40:15,852 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:40:15,863 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:40:15,863 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:40:15,866 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:40:15,866 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:40:15,867 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:40:15,867 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:40:15,867 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:40:15,867 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:40:15,870 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:40:15,870 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
+2021-09-03 22:40:24,629 : DEBUG : sLogger : readConfigFile : __init__ - (19) : Initiate readConfiFile Object for Config_Files//Training_schema.json config file
+2021-09-03 22:40:24,630 : DEBUG : sLogger : readConfigFile : readData - (38) : Initiate to read Config_Files//Training_schema.json config file
+2021-09-03 22:40:24,630 : DEBUG : sLogger : readConfigFile : readData - (50) : Read Config_Files//Training_schema.json config file successfully and the data is : {'ReadFileName': 'ai4i2020.csv', 'TrainModelPath': 'Training//Model//', 'DataDir': 'DataSource//Data', 'TargetCol': 'Air temperature [K]', 'ModelVer': '0.1', 'exeType': 'Training', 'hyperparam': 'False', 'classifier': 'ElasticNet', 'IndependentCol': ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF'], 'removecolumn': ['UDI', 'Product ID', 'Type']}
+2021-09-03 22:40:24,630 : INFO : sLogger : main : <module> - (29) : classifier : ElasticNet
+2021-09-03 22:40:24,635 : INFO : sLogger : main : <module> - (37) : TrainModelPath : Training//Model//
+2021-09-03 22:40:24,636 : INFO : sLogger : main : <module> - (40) : IndependentCol : ['Process temperature [K]', 'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]', 'Machine failure', 'TWF', 'HDF', 'PWF', 'OSF', 'RNF']
+2021-09-03 22:40:24,636 : INFO : sLogger : main : <module> - (42) : TargetCol : Air temperature [K]
+2021-09-03 22:40:24,636 : INFO : sLogger : main : <module> - (45) : ModelVer : 0.1
+2021-09-03 22:40:24,636 : INFO : sLogger : main : <module> - (48) : DataDir : DataSource//Data
+2021-09-03 22:40:24,637 : INFO : sLogger : main : <module> - (50) : FileName : ai4i2020.csv
+2021-09-03 22:40:24,640 : INFO : sLogger : main : <module> - (59) : hyperparam : False
+2021-09-03 22:40:24,640 : INFO : sLogger : main : <module> - (62) : removecolumn : ['UDI', 'Product ID', 'Type']
